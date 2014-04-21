@@ -51,7 +51,7 @@ function mapHeight(){
 
 function setMapHeight(){
     //Needs to set the correct height on the different screens
-    $('#map-canvas').height(524);
+    $('#map-canvas').height(650);
 }
 
 function nextHandler(){

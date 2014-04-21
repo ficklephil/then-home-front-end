@@ -39,6 +39,7 @@ body {
 //    padding-top: 20px;
     padding-bottom: 20px;
     font-size:12px;
+  background-color: #efefef;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -47,7 +48,7 @@ body {
 .footer {
     padding-left: 15px;
     padding-right: 15px;
-    border:1px solid red;
+//    border:1px solid red;
 }
 
 /* Custom page header */
@@ -128,6 +129,7 @@ body {
   margin-top: 41px;
   height:100%;
   width:100%;
+  border-bottom: 1px solid #d5d5d5;
 }
 
 .then-home{
@@ -206,8 +208,9 @@ a:hover{
 .search-control-container{
   z-index: 1;
   border:0px solid red;
-  width:100%;
+  width:83%;
   position: absolute;
+  left:100px;
 }
 
 .search-control{
@@ -368,17 +371,17 @@ a:hover{
   border:0px solid red;
   z-index:1;
   position: absolute;
-  top:60px;
-  right:10px;
+  top:69px;
+  right:40px;
 }
 
 .search-menu-item{
   text-align: center;
-  padding-top: 5px;
+  padding-top: 7px;
   background-color: #fbfbfb;
   border:1px solid #d5d5d5;
   width:210px;
-  height:28px;
+  height:32px;
   margin-bottom: 3px;
 
 }
