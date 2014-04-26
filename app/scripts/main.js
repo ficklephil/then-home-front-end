@@ -18,14 +18,14 @@ function setupGoogleMap() {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         disableDefaultUI: true,
 
-        panControl: true,
+        panControl: false,
         panControlOptions: {
             position: google.maps.ControlPosition.TOP_LEFT
         },
         zoomControl: true,
         zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.LARGE,
-            position: google.maps.ControlPosition.TOP_LEFT
+            style: google.maps.ZoomControlStyle.SMALL,
+            position: google.maps.ControlPosition.LEFT_CENTER
         },
         scaleControl: true,
         scaleControlOptions: {
@@ -33,7 +33,7 @@ function setupGoogleMap() {
         },
         streetViewControl: true,
         streetViewControlOptions: {
-            position: google.maps.ControlPosition.TOP_LEFT
+            position: google.maps.ControlPosition.LEFT_CENTER
         }
     };
 
@@ -110,7 +110,8 @@ function getItemAPI(location,centerLat,centerLng,lat_lo,lng_lo,lat_hi,lng_hi,pag
 //            var url = 'http://localhost:8080/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&centerLat='+centerLat+'&centerLng='+centerLng+'&lat_lo='+lat_lo+'&lng_lo='+lng_lo+'&lat_hi='+lat_hi+'&lng_hi='+lng_hi+'&page='+page+'&min_price='+minPrice+'&max_price='+maxPrice+'&updated_min='+updatedMin+'&callback=?';
 //            var url = 'http://127.0.0.1:1337/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&centerLat='+centerLat+'&centerLng='+centerLng+'&lat_lo='+lat_lo+'&lng_lo='+lng_lo+'&lat_hi='+lat_hi+'&lng_hi='+lng_hi+'&page='+page+'&min_price='+minPrice+'&max_price='+maxPrice+'&updated_min='+updatedMin+'&callback=?';
 //            var url = 'http://obscure-cliffs-3333.herokuapp.com/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&centralLat='+centerLat+'&centralLng='+centerLng+'&latLo='+lat_lo+'&lngLo='+lng_lo+'&latHi='+lat_hi+'&lngHi='+lng_hi+'&page='+page+'&minPrice='+minPrice+'&maxPrice='+maxPrice+'&updatedMin='+updatedMin+'&callback=?';
-    var url = 'http://localhost:5000/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&centralLat='+centerLat+'&centralLng='+centerLng+'&latLo='+lat_lo+'&lngLo='+lng_lo+'&latHi='+lat_hi+'&lngHi='+lng_hi+'&page='+page+'&minPrice='+minPrice+'&maxPrice='+maxPrice+'&updatedMin='+updatedMin+'&callback=?';
+//    var url = 'http://localhost:5000/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&centralLat='+centerLat+'&centralLng='+centerLng+'&latLo='+lat_lo+'&lngLo='+lng_lo+'&latHi='+lat_hi+'&lngHi='+lng_hi+'&page='+page+'&minPrice='+minPrice+'&maxPrice='+maxPrice+'&updatedMin='+updatedMin+'&callback=?';
+    var url = 'http://obscure-cliffs-3333.herokuapp.com/?screenResolutionX='+mapWidth+'&screenResolutionY='+mapHeight+'&placeName='+location+'&centralLat='+centerLat+'&centralLng='+centerLng+'&latLo='+lat_lo+'&lngLo='+lng_lo+'&latHi='+lat_hi+'&lngHi='+lng_hi+'&page='+page+'&minPrice='+minPrice+'&maxPrice='+maxPrice+'&updatedMin='+updatedMin+'&callback=?';
 
     $.ajax({
         type: 'GET',
@@ -207,7 +208,7 @@ function addItemToDisplay(itemType,longitudeXCoor,latitudeYCoor,price_formatted,
     $('.display-layer').append('<div class="item-dot '+itemType+'" style="left:'+ longitudeXCoor +'px; top:'+ latitudeYCoor +'px;">');
 
     $('.display-layer').append('<a href="'+imageLink+'" target="_blank"><div class="item-box" style="left:'+ longitudeXCoor +'px; top:'+ latitudeYCoor +'px;"><div class="item-image"><img src="'+imageSrc+'" width="100%" height="100%" ></div>' +
-        '<div class="item-data-container"><div class="item-data-field-one">'+price_formatted.substring(0,3)+' k</div><div class="item-data-field-two">'+bedroom_number+' Bed</div></div></a>');
+        '<div class="item-data-container"><div class="item-data-field-one">'+price_formatted.substring(0,3)+'<span style="font-size:0.8em;"> k</span></div><div class="item-data-field-two">'+bedroom_number+' <span style="font-size:0.8em;">Bed</span></div></div></a>');
 
 
 

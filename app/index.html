@@ -14,6 +14,7 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100' rel='stylesheet' type='text/css'>
+
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="libs/ouroboros/css/percentage.css" />
         <!-- endbuild -->
@@ -30,16 +31,16 @@
 
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!--<div class="container-fluid">-->
-                <!--<!--<div class="navbar-header">-->-->
-                    <!--<!---->-->
-                <!--<!--</div>-->-->
+                <!--<!--<div class="navbar-header">-->
+                    <!--<!---->
+                <!--<!--</div>-->
             <!--</div>-->
         </div>
-        <div class='then-home'><img src="images/THEN-HOME.png" alt="Then Home"></div>
+        <div class='then-home'><img src="images/THEN_HOME_logo.png" alt="Then Home"></div>
 
         <!-- Search Control Container -->
         <div class='search-control-container'>
-            <div class='search-control search-control-drop-shadow bell-gothic'>
+            <div class='search-control bell-gothic'>
                 <!-- Search Control -->
                 <div class='search'>
                     <div class='buy-rent left'>
@@ -78,21 +79,33 @@
         <!-- Search Control Container -->
 
         <!-- Search Menu -->
-        <div class='search-menu-control search-menu-control-drop-shadow bell-gothic-grey'>
-            <div class='search-menu-item'>PRICE : <input value="200">K to <input value="300">K</div>
-            <div class='search-menu-item'>PROPERTY TYPE : <input value="Both"></div>
-            <div class='search-menu-item'>BEDS : <input value="1"> to <input value="2"></div>
-            <!--<div class="search-menu-item page-number-display">hi</div>-->
-            <!--<div class="search-menu-item results-number-display">hi</div>-->
+        <div class='search-parameters'>
+            <div class='first-item'>PRICE : <input value="0k"> to <input value="5m">
+            </div>
+            <div class='item'>
+                <div class="btn-group then-home-btn">PROPERTY TYPE :
+                    <button type="button" class="dropdown-toggle" data-toggle="dropdown">
+                        <span style="color:#7eaa53;">BOTH </span><span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Both</a></li>
+                        <li><a href="#">House</a></li>
+                        <li><a href="#">Flat</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class='item'>BEDS : <input value="Studio">
+                to <input value="10">
+            </div>
+
+
         </div>
+
 
         <!-- !Search Menu -->
 
         <div class="display-layer"></div>
         <div style="z-index:0; position:relative; top:0;" id='map-canvas'></div>
-
-        <div class='content'></div>
-
 
         <div class="container">
             <div class="header">
